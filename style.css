@@ -1,22 +1,244 @@
-body{
-    padding: 0px;
-    margin: 0px;
+html{
+    margin: 0;
+    padding: 0;    
+}
+body
+{
+  margin: 0;
+  padding: 0;
+}
+
+#menuToggle
+{
+  display: block;
+  position: relative;
+  top: 50px;
+  left: 50px;
+  
+  z-index: 1;
+  
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle a
+{
+  text-decoration: none;
+  color: #232323;
+  
+  transition: color 0.3s ease;
+}
+
+#menuToggle a:hover
+{
+  color: tomato;
+}
+
+
+#menuToggle input
+{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  
+  cursor: pointer;
+  
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+  
+  -webkit-touch-callout: none;
+}
+
+/*
+ * Just a quick hamburger
+ */
+#menuToggle span
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  
+  background: #cdcdcd;
+  border-radius: 3px;
+  
+  z-index: 1;
+  
+  transform-origin: 4px 0px;
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+/* 
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+}
+
+/*
+ * But let's hide the middle one.
+ */
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
+ * Ohyeah and the last one should go the other direction
+ */
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+#menu
+{
+  position: absolute;
+  width: 300px;
+  margin: -100px 0 0 -50px;
+  padding: 50px;
+  padding-top: 125px;
+  
+  background: #ededed;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menu li
+{
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+#menuToggle input:checked ~ ul
+{
+  transform: none;
+}
+@media screen and (min-width:200px) and (max-width:600px) {
+    body{
+        background:rgb(114, 74, 74);
+        width: 100%;
+
+    }
+    #s1{
+        width: 100%;
+    }
+    #nav{
+        top: -10px;
+    }
+    header{
+        width: 480px;
+    }
+    #s2{
+        display: flex;
+        width: 480px;
+        padding: 25px 0 15px 0px;
+        justify-content: center;
+        margin-right:-50px ;
+    }
+    #i1{
+        padding-left: 534px;
+        margin-top: 100px;
+        justify-content: center;
+        width: 480px;
+   
+     
+    }
+    #i1 img{
+        width: 20px;
+        height: 20px;
+        justify-content: center;
+        right: 90px;
+        
+    }
+    #me{
+        margin-left: 0px;
+        margin-top:460px;
+        padding-right: 600px;
+        text-align: left;
+        
+
+    }
+    #b1{
+        width: 200px;
+        height: 220px;
+        margin-left: 436px;
+        top: 710px;
+        left: -135px;
+}
+#s3{
+    width: 100%;
+
+   
+}
+#in1 input{
+    font-family: serif;
+    font-size: 26px;
+    width: 50%;
+   
+    
+   
+}
+#in1{
+    width: 50%;
+}
+
+input{
+    width: 50%;
+}
+.footer{
+    display:flexbox;
+}
+
+
+
+
+
+
+
 }
 
     
 #logo{
     width: 95px;
     height: 75px;
+ 
     
 }
-nav{
-    
-}
+
 #mylogo img{
     width: 105px;
     height:85px;
     position: absolute;
-    position: fixed;
+    right: 20px;
+    top: 20px;
    
    
 }
@@ -29,7 +251,7 @@ nav{
 }
 #nav ul {
     margin-right: 380px;
-    margin-top: 60px;
+    margin-top: 20px;
     padding-left: 65px;
 }
 #nav ul li{
@@ -48,19 +270,6 @@ nav{
 #nav ul li a:hover{
     color:rgb(226, 43, 180);
    border-bottom: 3px solid mediumseagreen;
-}
-
-#wakologo img{
-    width: 98px;
-    height:88px;
-    padding-right: 30px;
-    float: right;  
- 
-}
-#wakologo {
-    padding-top: 0px;
-    float: right;  
-   
 }
 #s1{
     background-image: url("img/Polish_20220903_121037056.jpg") ;
@@ -135,16 +344,16 @@ nav{
    margin-left: 670px;
    padding-top: 120px;
 }
-#btn2{
+#btn2 {
     width: 200px;
     height: 45px;
     border-radius: 10px;
     border: 4px solid rgba(255, 0, 0, 0.384);
     font-size: 20px;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    color:red;
     font-weight: 900;
-    transition: 3s ease;
+    transition: 3s ease-out;
+    
 
 }
 #btn2:hover{
@@ -152,6 +361,11 @@ nav{
     color: rgb(232, 237, 240);
     border:5px solid rgb(236, 237, 238);
     cursor: pointer;
+}
+#btn2 a{
+    text-decoration: none;
+    color:red;
+
 }
 #h2{
     font-size: 35px;
@@ -164,11 +378,12 @@ nav{
     margin-top: 200px;
     background-color: rgb(245, 234, 223);
     text-align: center;
-    margin-bottom: 56px;
-    height: 500px;
+    height: 550px;
+    width: 100%;
 }
 #in1{
     margin-left: 60px;
+    margin-bottom: -10px;
   
 }
 #in1 input{
@@ -181,14 +396,48 @@ nav{
     padding-top: 50px;
     background-color: rgb(245, 234, 223);
     height: 50px;
-}
-#in1 input type{
     font-family: serif;
-    font-size: 56px;
+    font-size: 26px;
 }
+
 #h4{
    font-family: sans-serif;
    font-size: 35px;
    color: brown;
    padding-top: 65px;
 }
+#s2{
+    text-align: left;
+    max-width: fit-content;
+}
+.footer{
+    width: 100%;
+    background-color: #232323;
+    height: 100px;
+}
+.fa {
+    padding: 20px;
+    font-size: 800px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+    color: #fff;
+    border: 2px solid white;
+    margin-left: 250px;
+    margin-top: 20px;
+  }
+.spn p{
+    font-size: larger;
+    background-color: black;
+    width: 100%;
+    height: 20px;
+    margin-bottom: 60px;
+    color: #fff;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    margin-top: 0;
+    padding-top: 20px;
+    margin-bottom: 30px;
+}
+
