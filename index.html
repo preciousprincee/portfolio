@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PRECIOUS OGBONNAYA</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
    <section id="s1">
@@ -16,17 +17,22 @@
                 <img src="./img/Polish_20220903_121438488.png">
                
             </div>
-            <div id="nav">
-                <ul>
-                    <li><a href="#s2">ABOUT</a></li>
-                    <li><a href="#s3">CONTACT</a></li>
-                    <li><a href="#s3">SERVICES</a></li>
-                    <li><a href="#s2">PROJECTS</a></li>
-                </ul>
-            </div>
-            <div id="wakologo">
-                <img src="./img/logo-sm.d7094a5-removebg-preview.png" alt="">
-            </div>
+<nav role="navigation">
+    <div id="menuToggle">
+      <input type="checkbox" />
+
+      <span></span>
+      <span></span>
+      <span></span>
+      
+      <ul id="menu">
+        <a href="#s1"><li>Home</li></a>
+        <a href="#s2"><li>About</li></a>
+        <a href="#s3"><li>Info</li></a>
+        <a href="#s3"><li>Contact</li></a>
+      </ul>
+    </div>
+  </nav>
         </nav>
      </div>
     </header>
@@ -44,29 +50,41 @@
     <div id="me">
         <h1 id="h2" >Precious Ogbonnaya</h1>
         <h2 id="h3">Web Developer</h2>
-        <p>I am a problem solver, who is consistently looking for ways to solve<br> problems through tech,and also developing products to solve consumers<br> needs. <br> </p>
+        <p id="p2">I am a problem solver, who is consistently looking for ways to solve<br> problems through tech,and also developing products to solve consumers<br> needs. <br> </p>
         <ul>
             <li><b>From:</b> Abia, Nigeria</li><br>
             <li><b>Lives In:</b> Lagos, Nigeria</li><br>
             <li><b>Age:</b>19</li><br>
             <li><b>Gender:</b>Male</li><br>
         </ul>
-         <button id="btn2" ><a href="./my cv(Autosave).pdf ">Download CV</a></button>
+        <button id="btn2" ><a href="My cv (Autosaved).pdf" target="_blank" rel="noopener noreferrer">Download CV</a></button>
     </div>
   </section>
   <section id="s3">
       <h1 id="h4">CONTACT</h1>
-     <form action="mailto:pchukwuebuka964@gmail.com" method="get" enctype="text/plain">
+     <form action="mailto:pchukwuebuka964@gmail.com" method="get" enctype="text/plain" id="form">
         <div id="in1">
             <input type="text" placeholder="Name">
-            <input type="email" placeholder="E-mail">
+            <input type="email" placeholder="E-mail" required>
         </div><br><br>
         <div id="in1">
-            <input type="text" placeholder="Message">
+            <input type="text" placeholder="Message" required>
         </div><br><br>
-        <button id="btn2"> <a href="mailto:pchukwuebuka964@gmail.com" </a> Hire me</button>
+      
+            <button id="btn2"> <a href="mailto:pchukwuebuka964@gmail.com" > Hire me</a></button>
 
      </form>
+    
   </section>
+  <footer class="footer">
+    <span><a href="https://facebook.com/heis preciousprince" class="fa fa-facebook"></a></span>
+    <span><a href="https://twitter.com/Ebuka Precious" class="fa fa-twitter"></a></span>
+    <span><a href="https://:instagram.com/preciousfortunes" class="fa fa-instagram"></a></span>
+    <span class="spn">
+        <p>&#169;2022</p>
+    </span>
+  </footer>
+  
+  
 </body>
 </html>
