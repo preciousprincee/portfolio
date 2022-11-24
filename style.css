@@ -178,7 +178,7 @@ nav .r-nav{
     text-decoration: none;
     color: #fff;
 }
-@media screen and (min-width:200px) and (max-width:400px) {
+@media screen and (min-width:200px) and (max-width:1700px) {
    .pics{
        margin-bottom: 10px;
    }
@@ -209,7 +209,7 @@ nav .r-nav{
    }
 
 }
-@media screen and (min-width:500px) and (max-width:1000px) {
+@media screen and (min-width:1180px) and (max-width:1000px) {
     .nnn{
         margin-left: 0;
    }
